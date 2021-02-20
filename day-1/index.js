@@ -48,6 +48,7 @@
 
 // console.log(total);
 
+//Reduce with dates.
 const myDates = ['2019/06/01', ' 2018/06/01', '2018/06/01'];
 
 const biggestDate = myDates.reduce((acc, value) =>
