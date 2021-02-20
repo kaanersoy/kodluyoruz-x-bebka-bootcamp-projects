@@ -56,3 +56,17 @@ const biggestDate = myDates.reduce((acc, value) =>
 );
 
 console.log(biggestDate);
+
+// push array a element
+let socialApps = ['twitter', 'facebook'];
+socialApps = [...socialApps, 'tiktok'];
+
+// Object values use case:
+const myCars = {
+  car1: 'bugatti',
+  car2: 'ferrari',
+  car3: 'lambo',
+};
+const addedaNewBrandCar = [...Object.values(myCars), 'tofas'];
+
+console.log(addedaNewBrandCar);
