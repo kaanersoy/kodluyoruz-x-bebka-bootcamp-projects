@@ -9,7 +9,7 @@ const countryPaths = [
 const firstCountries = countryPaths.map((i) => i[0]);
 const secondCountries = countryPaths.map((i) => i[1]);
 
-// Get the start point
+// Get the start point (First path always returns one Number 👌)
 const startPoint = firstCountries.filter((ctry) => !secondCountries.includes(ctry))[0];
 
 // Create the path of follows by the user
