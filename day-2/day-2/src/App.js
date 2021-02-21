@@ -2,26 +2,32 @@ import './App.css';
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [peoples, setPeoples] = useState([]);
+  const [response, setResponse] = useState(null);
+  const [wantedResponse, setWantedResponse] = useState(null);
   useEffect(() => {
-    fetch('https://swapi.dev/api/people/')
+    fetch(`https://swapi.dev/api/people/`)
       .then((res) => res.json())
       .then((res) => {
-        setPeoples(res.results);
-        console.log(peoples);
+        // setResponse(res.results);
+        const filteredResponse = res.results.reduce(
+          (acc, item) => [
+            ...acc,
+            { name: item.name, bmi_index: getBMIIndex(item.mass, item.height) },
+          ],
+          []
+        );
       });
   }, []);
+
+  function getBMIIndex(weight, height) {
+    return (weight / (height / 100)) * (height / 100);
+  }
+
   return (
     <div className="App">
-      <h1>Kanye Rest!!</h1>
+      <h1>Kanye Rest📻</h1>
       <div className="data">
-        <ul>
-          {peoples.map((i) => (
-            <li>
-              <div>{i.name}</div>
-            </li>
-          ))}
-        </ul>
+        <ul></ul>
       </div>
     </div>
   );
