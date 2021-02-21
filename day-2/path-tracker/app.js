@@ -11,12 +11,12 @@ const secondCountries = countryPaths.map((i) => i[1]);
 
 // Get the start point
 const startPoint = firstCountries.filter((ctry) => !secondCountries.includes(ctry))[0];
-// console.log(startPoint);
 
+// Create the path of follows by the user
 const path = [startPoint];
 let now = startPoint;
 while (path.length < 5) {
-  countryPaths.forEach((ctc) => {
+  countryPaths.map((ctc) => {
     if (ctc[0] == now) {
       now = ctc[1];
       path.push(now);
