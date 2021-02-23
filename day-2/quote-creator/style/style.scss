@@ -16,6 +16,7 @@ body {
   .content {
     max-width: 800px;
     margin: 0 auto;
+    min-width: 800px;
     border-radius: 15px;
     padding: 30px;
     background-color: rgba($color: #e6e6e6, $alpha: 0.1);
@@ -25,7 +26,7 @@ body {
       align-items: center;
       justify-content: center;
       text-align: center;
-      min-width: 600px;
+
       margin-bottom: 50px;
       img {
         width: 90px;
@@ -72,24 +73,40 @@ body {
         }
       }
     }
-    button {
-      padding: 20px 30px;
-      color: #fff;
-      background-color: #0984e3;
-      border-radius: 8px;
-      margin: 0 auto;
-      display: block;
-      font-size: 26px;
-      border: none;
-      transition: 300ms;
-      border: 3px solid rgba($color: #fff, $alpha: 0);
-      &:hover {
-        cursor: pointer;
-        background-color: #339beb;
-        border: 3px solid rgba($color: #fff, $alpha: 5);
+    .button-container {
+      display: flex;
+      justify-content: center;
+      a {
+        font-size: 26px;
+        display: inline-block;
+        text-decoration: none;
+        background-color: #0984e3;
+        border-radius: 8px;
+        border: 3px solid rgba($color: #fff, $alpha: 0);
+        transition: 300ms;
+        width: 50%;
+        &:hover {
+          background-color: #339beb;
+          border: 3px solid rgba($color: #fff, $alpha: 5);
+        }
+        button {
+          padding: 15px 25px;
+          color: #fff;
+          background-color: transparent;
+          margin: 0 auto;
+          display: block;
+          font-size: inherit;
+          border: none;
+          &:hover {
+            cursor: pointer;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
       }
-      &:focus {
-        outline: none;
+      a + a {
+        margin-left: 30px;
       }
     }
   }
@@ -120,6 +137,119 @@ body {
     }
     100% {
       stroke-dasharray: 302;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    height: unset;
+    display: block;
+    .content {
+      padding: 20px;
+      min-width: unset;
+      max-width: unset;
+      margin: 0 auto;
+      margin-top: 30px;
+      width: 80%;
+      margin-bottom: 50px;
+      .header {
+        h1 {
+          text-align: center;
+          font-size: 30px;
+        }
+        display: block;
+      }
+      .quote p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .button-container {
+        display: block;
+        a {
+          width: 100%;
+          font-size: 16px;
+        }
+        a + a {
+          margin-top: 20px;
+          margin-left: unset;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 414px) {
+  body {
+    height: unset;
+    display: block;
+    .content {
+      padding: 20px;
+      min-width: unset;
+      max-width: unset;
+      margin: 50px auto;
+      width: 80%;
+      .header {
+        h1 {
+          text-align: center;
+          font-size: 30px;
+        }
+        display: block;
+      }
+      .quote p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      .button-container {
+        display: block;
+        a {
+          width: 100%;
+          font-size: 16px;
+        }
+        a + a {
+          margin-top: 20px;
+          margin-left: unset;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 415px) and (max-width: 1024px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content {
+      padding: 20px;
+      min-width: unset;
+      max-width: unset;
+      margin: 50px auto;
+      width: 80%;
+      .header {
+        h1 {
+          text-align: center;
+          font-size: 38px;
+        }
+      }
+      .quote {
+        p {
+          font-size: 30px;
+        }
+        small {
+          font-size: 20px;
+        }
+      }
+      .button-container {
+        display: block;
+        a {
+          width: 100%;
+          font-size: 35px;
+        }
+        a + a {
+          margin-top: 20px;
+          margin-left: unset;
+        }
+      }
     }
   }
 }

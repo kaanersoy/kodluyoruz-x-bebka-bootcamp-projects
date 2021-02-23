@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>quote | Random Quotes</title>
+    <title>quote / Random Quotes</title>
     <link rel="apple-touch-icon" sizes="57x57" href="./img/icons/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="./img/icons/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="./img/icons/apple-icon-72x72.png" />
@@ -42,7 +42,14 @@
         </p>
         <small id="author"></small>
       </div>
-      <button onclick="getRandomQuote()">GET SOME QUOTES</button>
+      <div class="button-container">
+        <a id="tweet" target="_blank">
+          <button>Tweet it!</button>
+        </a>
+        <a>
+          <button onclick="getRandomQuote()">GET SOME QUOTES</button>
+        </a>
+      </div>
     </div>
 
     <div class="loader" id="loader">
