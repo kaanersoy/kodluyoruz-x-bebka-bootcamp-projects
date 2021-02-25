@@ -41,12 +41,17 @@ body {
         &::after {
           content: '';
           position: absolute;
-          background-color: rgba($color: #fff, $alpha: 0.3);
-          width: 30%;
+          background-color: rgba($color: #0984e3, $alpha: 1);
+          width: 5%;
+          transition: 200ms width ease-out;
           height: 3px;
           bottom: -20px;
-          left: 50%;
-          transform: translateX(-50%);
+          left: 5px;
+        }
+        &.anim {
+          &::after {
+            width: 70%;
+          }
         }
       }
     }

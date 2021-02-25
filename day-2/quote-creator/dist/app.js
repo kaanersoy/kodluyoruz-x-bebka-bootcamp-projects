@@ -1,12 +1,14 @@
 const loader = document.getElementById('loader');
 const quoteContainer = document.querySelector('.quote');
 const quoteEl = quoteContainer.querySelector('p');
+const header = document.getElementById('header');
 const authorEl = quoteContainer.querySelector('small');
 const tweetButton = document.getElementById('tweet');
 
 async function getRandomQuote() {
   const uri = `https://goquotes-api.herokuapp.com/api/v1/random?count=1`;
   loader.classList.add('active');
+  animateHeaderWidth();
   fetch(uri)
     .then((res) => res.json())
     .then((data) => {
@@ -20,4 +22,14 @@ async function getRandomQuote() {
     });
 }
 
-window.addEventListener('load', getRandomQuote());
+window.addEventListener('load', () => {
+  getRandomQuote();
+  animateHeaderWidth();
+});
+
+function animateHeaderWidth() {
+  if (header.classList.contains('anim')) header.classList.remove('anim');
+  setTimeout(() => {
+    header.classList.add('anim');
+  }, 300);
+}
