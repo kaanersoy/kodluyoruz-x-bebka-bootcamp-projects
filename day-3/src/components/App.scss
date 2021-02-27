@@ -1,10 +1,21 @@
 .app-content {
-  width: 40%;
+  width: 80%;
   margin: 0 auto;
-  h1 {
-    font-size: 120px;
+  display: flex;
+  align-items: center;
+  .content {
+    width: 50%;
+    margin-right: 15px;
+    h1 {
+      font-size: 100px;
+    }
+    p {
+      font-size: 30px;
+    }
   }
-  p {
-    font-size: 40px;
+  .image {
+    img {
+      width: 100%;
+    }
   }
 }

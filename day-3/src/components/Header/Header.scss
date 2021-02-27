@@ -1,0 +1,32 @@
+$maincolor: #fff;
+$bgcolor: #6c79d9;
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: $bgcolor;
+  .logo {
+    h1 {
+      color: $maincolor;
+      font-size: 30px;
+    }
+  }
+  .urls {
+    a {
+      color: $maincolor;
+      font-size: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      & + a {
+        margin-left: 20px;
+      }
+      &:hover {
+      }
+    }
+  }
+}
