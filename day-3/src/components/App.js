@@ -3,6 +3,7 @@ import Header from '../components/Header/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './views/Home';
 import Friends from './views/Friends';
+import About from './views/About';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
         <Switch>
           <Route path="/friends">
             <Friends />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
           <Route path="/">
             <Home />

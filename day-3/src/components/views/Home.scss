@@ -1,7 +1,6 @@
 .app-content {
   width: 80%;
   margin: 0 auto;
-  margin-top: 80px;
   display: flex;
   align-items: center;
   .content {
@@ -20,5 +19,15 @@
     img {
       width: 100%;
     }
+  }
+}
+.right-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  z-index: -1;
+  img {
+    width: 100%;
   }
 }

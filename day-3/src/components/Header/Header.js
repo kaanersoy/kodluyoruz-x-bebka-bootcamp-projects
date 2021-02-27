@@ -7,7 +7,7 @@ export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 5) {
+      if (window.pageYOffset > 0) {
         return setIsSticky(true);
       }
       setIsSticky(false);
@@ -15,15 +15,18 @@ export default function Header() {
   });
 
   return (
-    <header className={isSticky ? 'sticky' : null}>
-      <div className="logo">
-        <h1>Frenzify</h1>
-      </div>
-      <div className="urls">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/friends">Friends</Link>
-      </div>
-    </header>
+    <section>
+      <header className={isSticky ? 'sticky' : null}>
+        <div className="logo">
+          <h1>Frenzify</h1>
+        </div>
+        <div className="urls">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/friends">Friends</Link>
+        </div>
+      </header>
+      <div className="place-holder"></div>
+    </section>
   );
 }

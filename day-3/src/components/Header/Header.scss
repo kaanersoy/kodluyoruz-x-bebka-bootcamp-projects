@@ -1,5 +1,5 @@
 $maincolor: #fff;
-$bgcolor: #6c79d9;
+$bgcolor: #e974a1;
 
 header {
   position: absolute;
@@ -9,16 +9,23 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px;
-  background-color: rgba($color: $bgcolor, $alpha: 1);
-  transition: 200ms ease-out;
+  padding: 50px;
+  background-color: rgba($color: $bgcolor, $alpha: 0.2);
+  transition: 200ms ease-out transform;
   &.sticky {
     background-color: rgba($color: $bgcolor, $alpha: 0.7);
     position: fixed;
+    animation: dropDown 350ms ease-out;
+    .logo {
+      h1 {
+        color: #fff;
+      }
+    }
   }
   .logo {
     h1 {
-      color: $maincolor;
+      margin: 0;
+      color: #e974a1;
       font-size: 30px;
     }
   }
@@ -32,5 +39,18 @@ header {
         margin-left: 20px;
       }
     }
+  }
+}
+.place-holder {
+  width: 100%;
+  height: 90px;
+}
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
