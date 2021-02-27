@@ -2,14 +2,20 @@ $maincolor: #fff;
 $bgcolor: #6c79d9;
 
 header {
-  position: sticky;
+  position: absolute;
+  display: flex;
   top: 0;
   left: 0;
-  display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 20px;
-  background-color: $bgcolor;
+  background-color: rgba($color: $bgcolor, $alpha: 1);
+  transition: 200ms ease-out;
+  &.sticky {
+    background-color: rgba($color: $bgcolor, $alpha: 0.7);
+    position: fixed;
+  }
   .logo {
     h1 {
       color: $maincolor;
@@ -24,8 +30,6 @@ header {
       font-weight: bold;
       & + a {
         margin-left: 20px;
-      }
-      &:hover {
       }
     }
   }
