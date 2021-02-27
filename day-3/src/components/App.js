@@ -1,21 +1,24 @@
-import './App.scss';
 import Header from '../components/Header/Header';
-import mainPageCoverImage from '../images/main-page-cover.svg';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './views/Home';
+import Friends from './views/Friends';
 
 function App() {
   return (
-    <section>
-      <Header></Header>
-      <div className="app-content">
-        <div className="content">
-          <h1>Frienzify</h1>
-          <p>Click and watch how rises your friend count!</p>
-        </div>
-        <div className="image">
-          <img src={mainPageCoverImage} alt="" />
-        </div>
-      </div>
-    </section>
+    <Router>
+      <section>
+        <Header></Header>
+        <Switch>
+          <Route path="/friends">
+            <Friends />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </section>
+    </Router>
   );
 }
 

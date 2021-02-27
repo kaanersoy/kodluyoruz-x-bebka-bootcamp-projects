@@ -1,6 +1,7 @@
 import './Header.scss';
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -19,9 +20,9 @@ export default function Header() {
         <h1>Frenzify</h1>
       </div>
       <div className="urls">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/friends">Friends</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/friends">Friends</Link>
       </div>
     </header>
   );
