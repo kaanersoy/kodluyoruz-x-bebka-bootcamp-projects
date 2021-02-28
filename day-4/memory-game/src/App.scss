@@ -1,0 +1,65 @@
+$maincolor: #b6b2f1;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.App {
+  header {
+    margin-bottom: 80px;
+    h1 {
+      text-align: center;
+    }
+  }
+  .card-container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .card {
+      perspective: 1000px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.6s;
+      width: 120px;
+      transform-style: preserve-3d;
+      background-color: $maincolor;
+      height: 160px;
+      &:hover {
+        transform: rotateY(180deg);
+      }
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-card-front {
+        color: black;
+      }
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background-color: #bbb;
+      }
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
