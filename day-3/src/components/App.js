@@ -1,5 +1,5 @@
 import Header from '../components/Header/Header';
-
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './views/Home';
 import Friends from './views/Friends';

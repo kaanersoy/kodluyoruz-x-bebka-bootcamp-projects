@@ -23,7 +23,7 @@ export default function Friends() {
       <div className="card-container">{isLoaded ? <Card user={randomUser} /> : null}</div>
       {!isLoaded ? (
         <div className="loading-icon">
-          <img src={loadingIcon} />
+          <img src={loadingIcon} alt="Loading icon" />
         </div>
       ) : null}
     </section>
