@@ -1,4 +1,4 @@
-# Kodluyoruz x BEBKA React Bootcamp Cheetseet
+# Kodluyoruz x BEBKA React Bootcamp Cheatsheet
 
 ## Day 1
 
