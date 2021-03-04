@@ -13,9 +13,7 @@ body {
   }
   header {
     margin-bottom: 80px;
-    h1 {
-      text-align: center;
-    }
+    text-align: center;
   }
   .card-container {
     display: flex;
@@ -33,7 +31,7 @@ body {
       transform-style: preserve-3d;
       height: 160px;
       margin-bottom: 30px;
-      &:hover .flip-card-inner {
+      &.flipped .flip-card-inner {
         transform: rotateY(180deg);
       }
       .flip-card-inner {
