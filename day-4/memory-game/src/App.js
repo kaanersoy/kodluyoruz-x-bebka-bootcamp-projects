@@ -7,6 +7,11 @@ function App() {
   const [flippedCards, setFlippedCards] = useState([]);
   const [score, setScore] = useState(0);
   const [matches, setMatches] = useState([]);
+  const [isStarted, setIsStarted] = useState(true);
+  const [animate, setAnimate] = useState(false);
+  const [gameAnimate, setGameAnimate] = useState(false);
+  const [finishAnimate, setFinishAnimate] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
 
   function selectCard(i, emoji) {
     const card = {
@@ -15,6 +20,15 @@ function App() {
     };
     setFlippedCards((cards) => [...cards, card]);
   }
+
+  function fadeoutEase() {
+    setAnimate(true);
+    setTimeout(() => {
+      setIsStarted(false);
+    }, 1000);
+  }
+  function toggleGameAnimate() {}
+
   useEffect(() => {
     if (flippedCards.length > 1) {
       const lastEmoji = flippedCards[flippedCards.length - 1];
@@ -30,6 +44,17 @@ function App() {
   }, [flippedCards]);
 
   useEffect(() => {
+    if (score == 4) {
+      setTimeout(() => {
+        setIsFinished(true);
+      }, 400);
+      setTimeout(() => {
+        setFinishAnimate(true);
+      }, 600);
+    }
+  }, [score]);
+
+  useEffect(() => {
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -43,11 +68,31 @@ function App() {
 
   return (
     <div className="App">
-      <div className="login-screen"></div>
+      {isStarted ? (
+        <section className={animate ? 'login animate' : 'login'}>
+          <div className="content">
+            <h1>
+              WELCOME TO<span>MemoCard</span>
+            </h1>
+            <div onClick={() => fadeoutEase()} className="button">
+              <span>Start</span>
+            </div>
+          </div>
+        </section>
+      ) : null}
+      {isFinished ? (
+        <section className={finishAnimate ? 'finish animate' : 'finish'}>
+          <div className="content">
+            <h1>YOU WIN!</h1>
+            <h5>🏆</h5>
+          </div>
+        </section>
+      ) : null}
       <header>
-        <h1>CARD GAME</h1>
+        <h1>MemoCard</h1>
         <h3>Your score : {score}</h3>
       </header>
+
       <div className="card-container">
         {shuffledCards
           ? shuffledCards.map((emoji, i) => (
