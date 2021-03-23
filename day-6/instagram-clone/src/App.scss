@@ -1,0 +1,176 @@
+*{margin:10; padding:0;}
+
+body{
+  height:100vh;
+  background-color: #655e84;
+}
+
+.center{
+  width:75vh;
+  height:100vh;
+  margin: 20px auto;
+}
+
+.navbar{
+  width:100%;
+  height:20%;
+  background-color:#827c9c;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between ;
+}
+
+.camera{
+ margin: 0 70% 0 0%;
+} 
+
+.insta{
+  margin: 0 25% 0 0 ;
+}
+
+.send{
+width:50%;
+margin: 1% 0 0 0;
+}
+
+.profile{
+  background: #827c9c;
+  height: 600px;
+  display:flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.photo-info {
+  padding: 10px 10px;
+  font-size:12px;
+  line-height: 1.5em;
+}
+
+.photo-info span {
+  font-weight: 600;
+}
+
+.profile img{
+  height:100%;
+  width:100%;
+}
+
+.val{
+   width:100%;
+  height:25%;
+  background-color:#827c9c;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.heart{
+  content:url("https://icons-for-free.com/free-icons/png/512/1904657.png");
+  background-repeat: no-repeat;
+  width:4%; 
+  margin: 1% 0% 1% 3%;
+  cursor:pointer;
+}
+
+.heart:hover{
+content:url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png');
+}
+
+.comment{
+  content:url("https://cdn3.iconfinder.com/data/icons/eldorado-stroke-basic/40/comment_baloon-512.png");
+  width:4%;
+  margin: 0.5% 0 0 3%;
+  cursor:pointer;
+}
+
+.air{
+ content:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAh1BMVEX///8AAAD6+vr19fUICAj4+PgUFBQPDw93d3ft7e0EBASdnZ3e3t4LCwvk5OTZ2dmOjo4ZGRkhISFCQkLT09MmJiY0NDSBgYHLy8txcXG7u7s9PT1RUVGysrIjIyNbW1tmZmaEhIS2traVlZWmpqZiYmJJSUkwMDBYWFjMzMzCwsI/Pz+fn5/yCVovAAAGrElEQVR4nO2c6XarOgyFS0gzj83UTE3SkLF9/+e7tD3ICEsGmmLDuvr+9WDWkcF4a8t2np4EQRAEQRAEQRAEQRAEQRAEQRAEQRAE4X/IbXGejWebUc91IA/hd+dexLW6XZkum16M/qfrgH7Fc/DhJTm4Dio/vVZD60ZI13Vc+ahtz1QvQupD17HlYHB4YboRsnEdXWZWmw7fjZBqTF3t0czYi5CR6xgz8Hqqk7G/LI5KTUo/tvzuhfkq3sOrtUn058V1oGam+z7Zi/Fi8NPgHV6P20CNPAdr+mVMglrUBjoycxmpEUb6vOYyrhmn6J/PzgI1wkrfvOvH27VhGli4CtXEYDEme1E/vSZajuDa1EmkRjjpm43aWluQl7mDQI1w0te53onWK7hesqzxvmOk7zAg22+iBk2fvO4G/8hI33lbo+8YwBhc2g3VBCd9jRafDi6gVVmyeFb61sEzf1cN5raJvVBNDBnp6+/Nc2oALQNLkZqobSdkL7xLN+0DhhvHzDdkEVb6dknp0xlCa+eqzknfGyF9OsuoeYeem23RHr2RvehsVpnu96G25dRTcdIHRiOVLtyTreNFwErfhJM+AnC5bwVGauTGSd+Sk7U20b1XuM9N2cH/nJO98OafzGxbWzS8+kbrIziqepaJ4a8ZLjnpu3G3tH/UopnQRuWodkUHrcFL35GXvl6U1ScMh3JU6YLzt/DSRxmNiLt6g3hwgWuxXAZ635C9CI2GcYQHsTka9deNo2pz1efvGpuBRbwxyuZdOKpfS9/zLt58Hb9k31G1WekL0qSvjSxKA30i6lXZKZ5w0tdkpU8xRJnYDN2gHNVHYbEreOlLNRohK7TcOcFTwhYuFO+ohnjhFdBrbCRdlN/vE8PQnqPipI+qsVG00F3JZEo5qtbfhx5nSo8pusZG4CPR6WtzNDiqgtfbtuQXztXYdAboObxo85ItR7Wi7CtbY9OZIvVc62NROaoUPX2MgZ7fmmpsGu/ofe6Isha8sGIXqXbJbhhrbBpHdC+1NcOSo+rhXqTV2BLUlvGb66RKWHJUKM9Lr7FhfLRMNSYVx5ajUjt3stTYMAOUl13oWU45qoyT+S+BT32du2p2Q85rw7xMW44KAsld6N+ibJ/TbOWojg9GmgL8P3mzoFG8G3V2TxyIfr9gRwXDI1/5r7aP96PBDn/lqPYPBpoGZIuNPPLRRknmLMsaVdGO6qDiaZ5WGcdXD63knnl9UI5qzbb5I4bxkLzGPssceUdZzdLQe5uOKln3GS/T5CRe8/E6xslIDdw8ac/v6OlJ/EvLNKBRLtA0zhHWHNU3gdaRkNmC0RVc83kzq48tR/WPrtaNby7ULnZc8/kwp4HKUVna03TntrWuj4m8Bdd8TimTnHpC2+KCR/gjdofupBt76rjmk2ovlKOyuBx939MrIeG8dI6WdFDNp5/6lJWjsrsVvrY60aWtMJXaBH6i5qPXGDTAUdlfjq5td3TNNHwBOyQ48/TYlKO6Wghdww82dDEecc2gb7YcFY8fnM3b2rNtwXC1RoVod5ka6hd0jSGJNUeVxuDIbMmiawwaylG5WI7GDEZEUZipMWj3WnNU2egdEitYXI0hiUot2RV520wXMRuVNYtVjqpUG3xvrZ8Uhq8xJFGOqmxH9V6Xl9kpu++26aiKxK6jKhDlqMqywfd3WHdURfEJL8SWoyoI0NESbPB9BOWonG/wNdIe7fbGIePQUeXhp8444VMVx44qK4NmWi6oHJW7Db4ZOPwLkl/ahNSsvEcNv4BKI5dEKUdV7nPFINqc1oGjcrLBNzuQ13boOJWjOlmOLCfPkH7Q+0VL6KgYQCXIg1IldVQUcP7Zo+SuvI5KowZFYqrOA46qVEcmaWBlmljgVI6qREcmOZRQ6GOrUo5Kfc+a4ilHVZIjk2ZgbGkTU8Uc1R3CTa4yVs1RcWOrKo4KgE86MbYq4qgU6smjuUk5qtL/DE0ELAKjZc6KOKo4sC6KVqMq4qji3ODZx8rBVXFUCHj4sempKo4KsdBHUWUcFWKqjy3lqGwfmXwIWJGL1g0q5KgQhyjs6FC3clQl+xGaFJTx+DeQquSoEImxVSlHhYCx9XO8pVKOCqEOnnzlI8pR2Tgy+beo/XH3J19t2SzDj9DkI7bL/0Xt8qqIo4oz8Cgq4qgQV6If9Yo4KkSP2GpXxReSPLr3xbyiGzZaiX68VXFgfTNCmx/znzcrD1N1ErExqt7MG2e6WDe8+ts1qFiuKAiCIAiCIAiCIAiCIAiCIAiCIAiCIAgx/gNgqFD/IuuhEgAAAABJRU5ErkJggg==");
+width:7%;
+margin: 0% 0 0 2%;
+  cursor:pointer;
+}
+
+.save{
+  content:url("https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-67-512.png");
+  width:9%;
+  margin: 0 0 0 67%;
+  cursor:pointer;
+}
+
+.save:hover{
+  content:url(
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABL1BMVEX///8wMDAcHBy7u7stLS34+PjjXFuwPrEpLyfXOobYPITmZ1pCQkKqQbTVM5CnQrbcSnKoRbzTLpXiWV7hV2HfUWjeUGvFMaPLLZ/kX1jgVGXSK5nRKpzUMZLaQnzZPoDcSHRxPH/WNovnblzpdl7qfF/shWLtiWPuj2TxmGfxnGjzpWr1rm2tOqWkM4+1Oq33tm++Naj5vnH6xnQdLS38znYXHysdLiwZJSwfMCj/2nojIyMlKi7R0dERERFTU1ONjY3i4uKjVUqUV0hGQTdwcHD/33wAAAClpaUrLyp9fX3htWw9MTtXSzvHx8elhVZMMUhuMmTormuzh1htV0EZLx1+M3JaMVPMrmaIdk0OGSlIQzeWglKNNoVJSUnMeFmIWkbSbVdPOzfLcVe/flg8M01RAAAEVElEQVR4nO3cf3cSRxTG8QyZtGlLf1nbak1jW221tmpptwTYZQlJwEA0VBIVDY2J+v5fQ+cSCQR2FpJ7TvdefT5/ec7OnLNfuZkgHnZhAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQLglrqwDZqi381ztetYRaaphaLnCsJp1Roq8Na1lnpax+awz/Kqxaf3I1TKx3BdxMWeWv+RaNrnFrEO8qPBzLvGFn3KhMFOusPwhV1l64f3TW72fbOyqysLl05K7PmNXk/4GxE/p8Eb/NT6P3dWnJ398llAo/TUsF976p+UrLN8tFB6eXH1yrzBFTeHTsudtWfmZu/r45OrD6UA9hYV7PmNXEwLlF37LhcJMUeEVpne/8Ir4wpUVVt+KhkIm8YXXuBQUXuK4dkl8IauPiC/8nkt84Wdc8gt/YhJfyA1UUPgRk/hCbqD8wo+51qQXXucS/xpeX2X1rcovXOWSXrjGLpT+c7j2AxcKM0WFX3ChMFNU+A0XCjNFhV9ziS/8jkt+4WUm6YUBN/ByIL3wKy7xhR9wiS+8yuu7qqCQS3zhJ1wozNSg8EZ6wMzL4gtvpDre2Nw4Tl8ivvBm2t1vBEEUBBtpS27KL0xxHBgTGhMcpy1SXfjKmtx6zthXqgt/9tt0N7++4BKDzZRVigtfB8YeulWH1gSvFRf+4kUzSt8zqIZuTv3LpBeWvHd+NJhRQnN65F1Xkl54y+NlafRlmLw1pZe+heILb3tunGZ0+J2tOp2neguTHUUmt326cDtnoiPPSqWFb9yM1sZW1tycvlFa+GsiY0YzSmhOTfJSnYVnZ5QM5lRn4Z0EkzNKBnOatFhlobE2N/ndV5rTLZWFv03bj5JumuZ0P2G1wkI3o2EjYXUjdHP6ThRGxsRJ30Gvx8ZECgt/n+RmNE6+5cXYzenUenWFe54ZJTSne9oLu+4cNb5nCNTpYldb4R9n+Wf07YZof2KHssK9on9GyWBONRd23ZuZMO1ZHkuhNVFXV+Gf42hGd1O37NJ5emaPqsKOO0fbM/a03Zx2tBZ2I2Pzs543s5SnOdVU+NfII/d+NH1Gya47Tx+N7ZJeWBzd6jwzStycFjujbUU1hTvuHDVzbXPrSjt6Cv8eohmd70EzVZrT4TY9hZ3i8APg2dbdvs5wo5bCneIc5+gQnafFHV2FlS17nochVWNjtyqaCiv9c8wocXNa6ld0FFbcfVZ6pZP/SJvfoTtPe7S1oqDQOZj7HB1y56k9GOzVUNjslyY/AJ5t2+3tN5UU9l5MfwA8W82aFz0lhe4cfXD+hx/WH9B5qqGw+fwCM0rcnJaeN+UXNnvFi8wocXNa7DVFF7pf3FF/y9rwYg/orIfWHvQjyc9NpH8lRO7NzEVmlLg5tdG8/yLJRjXnXoY47cO1dI3YDcA5f5P+z6rtWoPzU7TYqMl+Bi0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMD74D/GB3ZB3K4r/AAAAABJRU5ErkJggg==");
+  cursor:pointer;
+}
+
+.words{
+  width:100%;
+  height:60%;
+  background-color:#827c9c;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between ;
+}
+
+button{
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+p{
+  color: #000;
+  font-size: larger;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.liked{
+  margin-left:5%;
+  height:10%;
+  width:100%;
+}
+
+.by{
+  margin:0 0 0 0;
+  width:100%;
+  margin-top:10%;
+}
+
+br {
+   display: block;
+  line-height:25px;
+}
+
+.grey{
+   color: #BEC1C3;
+  font-size: 100%;
+  font-family: Helvetica;
+}
+
+ .space{
+    line-height:0%;
+  display: block;
+  } 
+
+.navbar2{
+  width:100%;
+  height:20%;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: space-evenly;
+  background-color:#827c9c;
+  border-top:solid #BEC1C3 2px;
+}
+
+.bar{
+  content:url("https://i2.wp.com/coleandtaffy.com/wp-content/uploads/2016/07/IG-bottom.jpg");
+  width:90%;
+  cursor:pointer;
+}
